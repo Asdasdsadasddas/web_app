@@ -5,7 +5,6 @@ pipeline{
         jdk "Java17"
         maven "Maven3"
     }
-
     }
     stages{
         stage("Cleanup Workspace"){
@@ -13,9 +12,6 @@ pipeline{
                 cleanWs {}
             }
         }
-
-    }
-        stages{
         stage("Checkout from SCM"){
             steps{
                 git branch: 'main', credentialsId: 'github', url:'https://github.com/Asdasdsadasddas/web_app'    {}
