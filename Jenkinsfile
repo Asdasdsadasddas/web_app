@@ -38,7 +38,7 @@ pipeline{
                 sh "mvn test"
             }
         }
-        stage("Build image & upload to dockerhub"){
+        stage("Build image & upload to dockerhub") {
             steps{
                 script {
                     docker.withRegistry('',DOCKER_PASS) {
